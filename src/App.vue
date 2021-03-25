@@ -1,27 +1,29 @@
 <template>
-  <div id="app">
-    <Thoughts />
-  </div>
+  <v-app>
+    <v-main>
+      <Thoughts />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import Thoughts from "./components/Thoughts.vue";
+import Thoughts from "./components/Thoughts";
 
 export default {
   name: "App",
+
   components: {
     Thoughts,
   },
+
+  data: () => ({
+    //
+  }),
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+body {
+  background-color: grey;
 }
 </style>

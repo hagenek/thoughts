@@ -1,8 +1,14 @@
 <template lang="en">
   <div class="main-container">
+  <v-container>
+  <v-row no-gutters>
     <div v-for="thought in thoughts">
+    <v-col md="6">
       <Thought @thoughtLiked="handleThoughtLiked" :thought=thought />
+    </v-col>
     </div>
+    </v-row>
+    </v-container>
   </div>
 </template>
 <script>
@@ -31,16 +37,16 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style>
 li {
   font-size: 20px;
 }
 
 .main-container {
-  max-width: 800px;
+  background: lightgray;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 </style>

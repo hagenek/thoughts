@@ -1,11 +1,15 @@
 <template lang="">
-  <div class="container-sm">
-    <h1>{{ thought.message }}</h1>
-    <h3>
-      Given hearts: <span class="fas fa-heart"></span> {{ thought.hearts }}
-    </h3>
-    <button class="heart-btn" @click="handleLikeThought">Add heart!</button>
-  </div>
+  <v-container class="container">
+    <v-card elevation="2">
+      <v-card-title>{{ thought.message }}</v-card-title>
+      <v-card-text>
+        Given hearts: <span class="fas fa-heart"></span> {{ thought.hearts }}
+      </v-card-text>
+      <v-card-actions>
+        <v-btn @click="handleLikeThought"><i class="fas fa-heart lg"/></v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-container>
 </template>
 <script>
 export default {
@@ -22,11 +26,8 @@ export default {
 h1 {
   color: brown;
 }
-button {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  padding: 10px 26px;
-  font-family: "fira code";
+
+.container {
+  width: 300px;
 }
 </style>
